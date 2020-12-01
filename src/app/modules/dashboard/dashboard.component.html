@@ -1,0 +1,32 @@
+<div>
+    <app-area [data]="Chart"></app-area>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <mat-card fxFlex="25">
+        <app-card label="user 1" total="10k" percentage="50" [data]="Card"></app-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-card label="user 2" total="5k" percentage="70"></app-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-card label="user 3" total="5k" percentage="25"></app-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-card label="user 4" total="3k" percentage="40"></app-card>
+    </mat-card>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">Table Pie</div>
+    <div fxFlex="40">
+        <app-pie [data]="Pie"></app-pie>
+    </div>
+</div>
+<br>
+
+               
