@@ -14,7 +14,7 @@ import { ArticlesComponent } from './modules/articles/articles.component';
     AppComponent,
     TurnamentComponent,
     PanitiaComponent,
-    ArticlesComponent
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,15 +8,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
-
+import { HighchartsChartModule } from 'highcharts-angular';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AreaComponent } from './widget/area/area.component';
-import { HighchartsChartModule } from 'highcharts-angular';
-import { PieComponent } from './widget/pie/pie.component';
-import { CardComponent } from './widget/card/card.component';
-import { MatCardModule } from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,9 +25,7 @@ import { MatCardModule } from '@angular/material/card';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent,
-    PieComponent,
-    CardComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -38,16 +37,19 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent,
-    CardComponent,
-    PieComponent
-    
   ]
 })
 export class SharedModule { }

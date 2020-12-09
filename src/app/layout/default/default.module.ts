@@ -27,9 +27,8 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
     MatDividerModule,
     FlexLayoutModule,
     MatCardModule,
-    MatPaginatorModule,
     MatTableModule,
-    MatCardModule
+    MatPaginatorModule
   ],
   providers:[
     DashboardService

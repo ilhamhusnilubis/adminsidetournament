@@ -5,25 +5,28 @@ import { ArticlesComponent } from './modules/articles/articles.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { TurnamentComponent } from './modules/turnament/turnament.component';
+import { LoginComponent } from './shared/login/login.component';
 
-const routes: Routes = [{
-  path:'',
+const routes: Routes = [
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'login',component:LoginComponent},
+  {path:'',
   component:DefaultComponent,
   children:[{
-    path:'',
+    path:'dashboard',
     component:DashboardComponent
   }, {
-    path:'post',
+    path:'peserta',
     component:PostComponent
   },{
     path:'turnament',
     component:TurnamentComponent
   },
   {
-    path:'articles',
+    path:'panitia',
     component:ArticlesComponent
-  }]
-}]
+  }]}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
