@@ -18,6 +18,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 
 @NgModule({
@@ -44,6 +47,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     HttpClientModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule
   ],
   exports:[

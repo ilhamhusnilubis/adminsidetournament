@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-turnament',
@@ -6,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./turnament.component.scss']
 })
 export class TurnamentComponent implements OnInit {
+  name = 'Angular';
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private route : Router) { }
+  ngOnInit() {}
 }
+
+

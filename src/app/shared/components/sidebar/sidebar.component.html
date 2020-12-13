@@ -7,19 +7,40 @@
     </div>
     <mat-divider></mat-divider>
     <div class="side">
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+        <button mat-button [matMenuTriggerFor]="animals">Tournament Menu</button>
+        <mat-menu #animals="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="singleelimination">Single Elimination Tournament</button>
+          <button mat-menu-item [matMenuTriggerFor]="freeforall">Free For All Tournament</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/addturnament">Add Tournament</button>
+        </mat-menu>
+        <mat-menu #singleelimination="matMenu">
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnament" >Basket</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamentsepakbola">Sepak Bola</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamentbolavoli">Bola Voli</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamentsepaktakraw">Sepak Takraw</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamentbadminton">Badminton</button>
+        </mat-menu>
+        
+        <mat-menu #freeforall="matMenu">
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamenbalapkarung">Balap Karung</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamenmakankerupuk">Makan Kerupuk</button>
+          <button mat-menu-item routerLinkActive="menu-item-active" routerLink="/turnamenbalapkelereng">Balap Kelereng</button>
+        </mat-menu>
     </div>
     <mat-divider></mat-divider>
     <div class="side">
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/turnament">Turnament</a>
+      <button mat-button [matMenuTriggerFor]="menu" >Panitia Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLinkActive="active" routerLink="/createpanitia">Create Account Panitia</button>
+        <button mat-menu-item routerLinkActive="active" routerLink="/panitia">Edit & List Panitia</button>
+      </mat-menu>
     </div>
     <mat-divider></mat-divider>
     <div class="side">
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/panitia">Panitia</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/editparticipant">Edit Participant</a>
     </div>
     <mat-divider></mat-divider>
     <div class="side">
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/peserta">Peserta</a>
-    </div>
-    <mat-divider></mat-divider>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/tablescore">Setting Score</a>
+  </div>
 </mat-nav-list>
