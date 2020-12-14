@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LurahloginComponent } from './lurahlogin.component';
+import { ListturnamenComponent } from './listturnamen.component';
 
-describe('LurahloginComponent', () => {
-  let component: LurahloginComponent;
-  let fixture: ComponentFixture<LurahloginComponent>;
+describe('ListturnamenComponent', () => {
+  let component: ListturnamenComponent;
+  let fixture: ComponentFixture<ListturnamenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LurahloginComponent ]
+      declarations: [ ListturnamenComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LurahloginComponent);
+    fixture = TestBed.createComponent(ListturnamenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

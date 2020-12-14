@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layout/default/default.module';
 import { TurnamentComponent } from './modules/turnament/turnament.component';
 import { PanitiaComponent } from './modules/panitia/panitia.component';
-import { ArticlesComponent } from './modules/articles/articles.component';
 import { TurnamentSepakBolaComponent } from './modules/turnament/turnament-sepak-bola/turnament-sepak-bola.component';
 import { TurnamentBolaVoliComponent } from './modules/turnament/turnament-bola-voli/turnament-bola-voli.component';
 import { TurnamentSepakTakrawComponent } from './modules/turnament/turnament-sepak-takraw/turnament-sepak-takraw.component';
@@ -26,16 +25,20 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LurahloginComponent } from './modules/lurahlogin/lurahlogin.component';
-import { PanitialoginComponent } from './modules/panitialogin/panitialogin.component';
+
 import { MatCardModule } from '@angular/material/card';
+import { TableturnamenComponent } from './modules/tableturnamen/tableturnamen.component';
+import { LurahComponent } from './modules/lurahmenu/createlurah/lurah.component';
+import { ListpanitiaComponent } from './modules/listpanitia/listpanitia.component';
+import { ListturnamenComponent } from './modules/listturnamen/listturnamen.component';
+import { WaitinglistComponent } from './modules/waitinglist/waitinglist.component';
+import { ListlurahComponent } from './modules/listlurah/listlurah.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TurnamentComponent,
     PanitiaComponent,
-    ArticlesComponent,
     TurnamentSepakBolaComponent,
     TurnamentBolaVoliComponent,
     TurnamentSepakTakrawComponent,
@@ -48,8 +51,13 @@ import { MatCardModule } from '@angular/material/card';
     EditparticipantComponent,
     TablescoreComponent,
     AdminloginComponent,
-    LurahloginComponent,
-    PanitialoginComponent,
+    
+    TableturnamenComponent,
+    LurahComponent,
+    ListpanitiaComponent,
+    ListturnamenComponent,
+    WaitinglistComponent,
+    ListlurahComponent,
 
   ],
   imports: [

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layout/default/default.component';
-import { ArticlesComponent } from './modules/articles/articles.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { TurnamentComponent } from './modules/turnament/turnament.component';
@@ -19,15 +18,20 @@ import { CreatepanitiaComponent } from './modules/panitia/createpanitia/createpa
 import { EditparticipantComponent } from './modules/editparticipant/editparticipant.component';
 import { TablescoreComponent } from './modules/tablescore/tablescore.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { PanitialoginComponent } from './modules/panitialogin/panitialogin.component';
-import { LurahloginComponent } from './modules/lurahlogin/lurahlogin.component';
+import { TableturnamenComponent } from './modules/tableturnamen/tableturnamen.component';
+import { ListpanitiaComponent} from './modules/listpanitia/listpanitia.component';
+import { LurahComponent } from './modules/lurahmenu/createlurah/lurah.component';
+import { ListturnamenComponent } from './modules/listturnamen/listturnamen.component';
+import { WaitinglistComponent } from './modules/waitinglist/waitinglist.component';
+import { ListlurahComponent } from './modules/listlurah/listlurah.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'adminlogin',component:AdminloginComponent},
   {path:'login',component:LoginComponent},
-  {path:'lurahlogin',component:LurahloginComponent},
-  {path:'panitialogin',component:PanitialoginComponent},
+  {path:'tableturnamen',component:TableturnamenComponent},
+  
+
 
   {path:'',
   component:DefaultComponent,
@@ -76,6 +80,21 @@ const routes: Routes = [
 },{
   path:'tablescore',
   component:TablescoreComponent
+},{
+  path:'lurah',
+  component: LurahComponent
+},{
+  path:'listpanitia',
+  component: ListpanitiaComponent
+},{
+  path:'listturnamen',
+  component: ListturnamenComponent
+},{
+  path:'waitinglist',
+  component: WaitinglistComponent
+},{
+  path:'listlurah',
+  component: ListlurahComponent
 },
   { path:'panitia', component:PanitiaComponent}]}
 ]

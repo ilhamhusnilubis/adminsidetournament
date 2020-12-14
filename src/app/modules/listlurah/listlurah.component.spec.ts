@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PanitialoginComponent } from './panitialogin.component';
+import { ListlurahComponent } from './listlurah.component';
 
-describe('PanitialoginComponent', () => {
-  let component: PanitialoginComponent;
-  let fixture: ComponentFixture<PanitialoginComponent>;
+describe('ListlurahComponent', () => {
+  let component: ListlurahComponent;
+  let fixture: ComponentFixture<ListlurahComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PanitialoginComponent ]
+      declarations: [ ListlurahComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PanitialoginComponent);
+    fixture = TestBed.createComponent(ListlurahComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

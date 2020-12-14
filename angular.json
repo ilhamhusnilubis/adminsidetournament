@@ -46,7 +46,9 @@
               "node_modules/hammerjs/hammer.min.js",
               "src/assets/table.js",
               "src/assets/tablescore.js",
-              "node_modules/jquery/dist/jquery.min.js"
+              "src/assets/tableturnamen.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-bracket/dist/jquery.bracket.min.js"
 
             ]
           },
