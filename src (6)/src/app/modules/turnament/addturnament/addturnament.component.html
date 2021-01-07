@@ -1,0 +1,75 @@
+<!-- Default form subscription -->
+<form
+  class="text-center border border-light p-5"
+  [formGroup]="tournamentForm"
+  (ngSubmit)="newTournament()"
+>
+  <p class="h4 mb-4">Add Turnament</p>
+  <!-- Name -->
+  <input
+    type="text"
+    id="defaultSubscriptionFormPassword"
+    class="form-control mb-4"
+    placeholder="Nama Turnamen"
+    formControlName="name"
+  />
+
+  <!-- Games -->
+  <input
+    type="text"
+    id="defaultSubscriptionFormEmail"
+    class="form-control mb-4"
+    placeholder="Kategori Turnament"
+    formControlName="category"
+  />
+  <input
+    type="text"
+    id="defaultSubscriptionFormEmail"
+    class="form-control mb-4"
+    placeholder="Tipe Turnament"
+    formControlName="tournamentType"
+  />
+
+  <!-- Games -->
+  <input
+    type="text"
+    id="defaultSubscriptionFormEmail"
+    class="form-control mb-4"
+    placeholder="Age Range"
+    formControlName="ageRange"
+  />
+
+  <div formGroupName="prizePool">
+    <p class="h4">Prize Pool</p>
+    <!-- Name -->
+    <input
+      type="number"
+      id="defaultSubscriptionFormPassword"
+      class="form-control mb-4"
+      placeholder="First Prize"
+      formControlName="firstPrize"
+    />
+
+    <!-- Games -->
+    <input
+      type="number"
+      id="defaultSubscriptionFormEmail"
+      class="form-control mb-4"
+      placeholder="Second Prize"
+      formControlName="secondPrize"
+    />
+
+    <!-- Games -->
+    <input
+      type="number"
+      id="defaultSubscriptionFormEmail"
+      class="form-control mb-4"
+      placeholder="Third Prize"
+      formControlName="thirdPrize"
+    />
+  </div>
+
+  <!-- Submit -->
+  <button class="btn btn-info btn-block" type="submit">Submit</button>
+</form>
+<!-- Default form subscription -->

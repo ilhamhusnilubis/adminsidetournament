@@ -18,7 +18,9 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "jquery",
+              "rxjs/add/operator/map"
            ],
             "outputPath": "dist/admin",
             "index": "src/index.html",
@@ -39,17 +41,21 @@
               "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "node_modules/animate.css/animate.css"
+              "node_modules/animate.css/animate.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/open-iconic/font/css/open-iconic-bootstrap.css",
+              "node_modules/@theo4u/ng-alert/style.css",
+              "node_modules/jquery-bracket/dist/jquery.bracket.min.css"
+
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/hammerjs/hammer.min.js",
-              "src/assets/table.js",
-              "src/assets/tablescore.js",
-              "src/assets/tableturnamen.js",
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/jquery-bracket/dist/jquery.bracket.min.js"
-
+              "node_modules/jquery-bracket/dist/jquery.bracket.min.js",
+              "src/assets/addremovebutton.js",
+              "src/assets/tablescore.js",
+              "src/assets/tableturnamen.js"
             ]
           },
           "configurations": {

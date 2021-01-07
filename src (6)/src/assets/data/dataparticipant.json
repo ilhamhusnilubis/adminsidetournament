@@ -1,0 +1,9 @@
+[
+    {"name": "Ilham", "age": "29", "team":"Warriors", "game": "basket"},
+    {"name": "Dwi", "age": "28", "team":"Rockets", "game": "basket"},
+    {"name": "Zhuan", "age": "25", "team":"L.A Lakers", "game": "basket"},
+    {"name": "Angga", "age": "25", "team":"Buls", "game": "basket"},
+    {"name": "Louis", "age": "27", "team":"Thunder", "game": "basket"},
+    {"name": "Petrus", "age": "30", "team":"Miami", "game": "basket"},
+    {"name": "Dadi", "age": "31", "team":"Heat", "game": "basket"}
+]

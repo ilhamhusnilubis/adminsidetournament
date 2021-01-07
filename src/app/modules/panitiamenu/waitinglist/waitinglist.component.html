@@ -1,0 +1,66 @@
+<!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
+    Waiting List
+  </h3>
+  <div class="card-body">
+    <div id="table">
+      <table
+        class="table table-bordered table-responsive-md table-striped text-center"
+      >
+        <thead>
+          <tr>
+            <th class="text-center">Nama</th>
+            <th class="text-center">Umur</th>
+            <th class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let waitingData of tournamentData.waitingList">
+            <td class="pt-3-half">
+              {{ waitingData.firstName }}
+            </td>
+            <td class="pt-3-half">{{ waitingData.username }}</td>
+            <td>
+              <span class="table-remove">
+                <button
+                  type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0"
+                  *ngIf="this.tournamentData.registerModel === 'Client'"
+                  (click)="updateApproval(waitingData._id, 'Approved')"
+                >
+                  Approve User
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0"
+                  *ngIf="this.tournamentData.registerModel === 'Team'"
+                  (click)="updateApprovalTeam(waitingData._id, 'Approved')"
+                >
+                  Approve Team
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0"
+                  *ngIf="this.tournamentData.registerModel === 'Client'"
+                  (click)="updateApproval(waitingData._id, 'Rejected')"
+                >
+                  Remove User
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0"
+                  *ngIf="this.tournamentData.registerModel === 'Team'"
+                  (click)="updateApprovalTeam(waitingData._id, 'Rejected')"
+                >
+                  Remove User
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->

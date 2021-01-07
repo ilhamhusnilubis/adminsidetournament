@@ -1,0 +1,26 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Tipe Turnamen</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option value="" disabled selected>Games</option>
+    <option value="1">Basket</option>
+    <option value="2">Sepak Bola</option>
+    <option value="4">Badminton</option>
+    <option value="5">Sepak Takraw</option>
+    <option value="6">Balap Kelereng</option>
+    <option value="7">Makan Kerupuk</option>
+    <option value="8">Panjat Pinang</option>
+  </select>
+</div>
+
+<div class="container">
+  <select class="selectname" name="team" *ngFor=" let team of minimalData">
+    <option value="">
+      {{team.teams}}
+    </option>
+  </select>
+  
+  <div id="minimal"></div>
+  </div>
+

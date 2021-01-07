@@ -1,0 +1,119 @@
+<!-- Default form subscription -->
+<form
+  class="text-center border border-light p-5"
+  [formGroup]="tournamentForm"
+  (ngSubmit)="newTournament()"
+>
+  <p class="h4 mb-4">Add Turnament</p>
+  <!-- Nama Turnamen -->
+  <input
+    type="text"
+    id="defaultSubscriptionFormPassword"
+    class="form-control mb-4"
+    placeholder="Nama Turnamen"
+    formControlName="name"
+  />
+
+  <!-- TIpe Turnamen -->
+  <div class="input-group mb-3">
+    <select
+      class="custom-select"
+      id="inputGroupSelect02"
+      type="text"
+      id="defaultSubscriptionFormEmail"
+      formControlName="tournamentType"
+    >
+      <option value="" disabled selected>Tipe Tournament</option>
+      <option value="Elimination" type="text">Elimination</option>
+      <option value="FreeForAll" type="text">Free For All</option>
+    </select>
+  </div>
+
+  <!-- Kategori Turnamen -->
+  <div class="input-group mb-3">
+    <select
+      class="custom-select"
+      id="inputGroupSelect02"
+      type="text"
+      id="defaultSubscriptionFormEmail"
+      formControlName="category"
+    >
+      <option type="" value="" disabled selected>Kategori Game</option>
+      <option
+        type="text"
+        *ngFor="let category of categoryList"
+        [value]="category.categoryName"
+      >
+        {{ category.categoryName }}
+      </option>
+    </select>
+  </div>
+
+  <!--Age Range-->
+  <div class="input-group mb-3">
+    <select
+      class="custom-select"
+      id="inputGroupSelect02"
+      type="text"
+      id="defaultSubscriptionFormEmail"
+      formControlName="ageRange"
+    >
+      <option type="" value="" disabled selected>Age Range</option>
+      <option type="text">Dewasa</option>
+      <option type="text">Remaja</option>
+      <option type="text">Anak-Anak</option>
+    </select>
+  </div>
+
+  <!--Price Pool-->
+  <div formGroupName="prizePool">
+    <p class="h4">Prize Pool</p>
+    <input
+      type="number"
+      id="defaultSubscriptionFormPassword"
+      class="form-control mb-4"
+      placeholder="First Prize"
+      formControlName="firstPrize"
+    />
+
+    <!-- Games -->
+    <input
+      type="number"
+      id="defaultSubscriptionFormEmail"
+      class="form-control mb-4"
+      placeholder="Second Prize"
+      formControlName="secondPrize"
+    />
+
+    <!-- Games -->
+    <input
+      type="number"
+      id="defaultSubscriptionFormEmail"
+      class="form-control mb-4"
+      placeholder="Third Prize"
+      formControlName="thirdPrize"
+    />
+  </div>
+
+  <!-- Permalink -->
+  <input
+    type="text"
+    id="defaultSubscriptionEmail"
+    class="form-control mb-4"
+    placeholder="permalink"
+    formControlName="permalink"
+  />
+
+  <!-- Rule -->
+  <input
+    type="text"
+    id="defaultSubscriptionEmail"
+    class="form-control mb-4"
+    placeholder="Rule games"
+    formControlName="rule"
+  />
+
+  <!-- Submit -->
+  <button class="btn btn-info btn-block" type="submit">Submit</button>
+</form>
+<!-- Default form subscription -->

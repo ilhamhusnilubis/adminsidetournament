@@ -5,34 +5,44 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layout/default/default.module';
-import { TurnamentComponent } from './modules/turnament/turnament.component';
-import { PanitiaComponent } from './modules/panitia/panitia.component';
-import { TurnamentSepakBolaComponent } from './modules/turnament/turnament-sepak-bola/turnament-sepak-bola.component';
-import { TurnamentBolaVoliComponent } from './modules/turnament/turnament-bola-voli/turnament-bola-voli.component';
-import { TurnamentSepakTakrawComponent } from './modules/turnament/turnament-sepak-takraw/turnament-sepak-takraw.component';
-import { TurnamentBadmintonComponent } from './modules/turnament/turnament-badminton/turnament-badminton.component';
-import { TurnamenBalapKarungComponent } from './modules/turnament/turnamen-balap-karung/turnamen-balap-karung.component';
-import { TurnamenMakanKerupukComponent } from './modules/turnament/turnamen-makan-kerupuk/turnamen-makan-kerupuk.component';
-import { TurnamenBalapKelerengComponent } from './modules/turnament/turnamen-balap-kelereng/turnamen-balap-kelereng.component';
-import { AddturnamentComponent } from './modules/turnament/addturnament/addturnament.component';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { TurnamentComponent } from './modules/panitiamenu/turnament/turnament.component';
+import { PanitiaComponent } from './modules/panitiamenu/panitia/panitia.component';
+import { TurnamentSepakBolaComponent } from './modules/panitiamenu/turnament/turnament-sepak-bola/turnament-sepak-bola.component';
+import { TurnamentBolaVoliComponent } from './modules/panitiamenu/turnament/turnament-bola-voli/turnament-bola-voli.component';
+import { TurnamentSepakTakrawComponent } from './modules/panitiamenu/turnament/turnament-sepak-takraw/turnament-sepak-takraw.component';
+import { TurnamentBadmintonComponent } from './modules/panitiamenu/turnament/turnament-badminton/turnament-badminton.component';
+import { TurnamenBalapKarungComponent } from './modules/panitiamenu/turnament/turnamen-balap-karung/turnamen-balap-karung.component';
+import { TurnamenMakanKerupukComponent } from './modules/panitiamenu/turnament/turnamen-makan-kerupuk/turnamen-makan-kerupuk.component';
+import { TurnamenBalapKelerengComponent } from './modules/panitiamenu/turnament/turnamen-balap-kelereng/turnamen-balap-kelereng.component';
+import { AddturnamentComponent } from './modules/panitiamenu/addturnament/addturnament.component';
+import { MatTableModule } from '@angular/material/table';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { CreatepanitiaComponent } from './modules/panitia/createpanitia/createpanitia.component';
-import { EditparticipantComponent } from './modules/editparticipant/editparticipant.component';
-import { TablescoreComponent } from './modules/tablescore/tablescore.component';
+import { CreatepanitiaComponent } from './modules/lurahmenu/createpanitia/createpanitia.component';
+import { EditparticipantComponent } from './modules/panitiamenu/editparticipant/editparticipant.component';
+import { TablescoreComponent } from './modules/panitiamenu/tablescore/tablescore.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 import { MatCardModule } from '@angular/material/card';
-import { TableturnamenComponent } from './modules/tableturnamen/tableturnamen.component';
-import { LurahComponent } from './modules/lurahmenu/createlurah/lurah.component';
-import { ListpanitiaComponent } from './modules/listpanitia/listpanitia.component';
-import { ListturnamenComponent } from './modules/listturnamen/listturnamen.component';
-import { WaitinglistComponent } from './modules/waitinglist/waitinglist.component';
-import { ListlurahComponent } from './modules/listlurah/listlurah.component';
+import { LurahComponent } from './modules/adminmenu/createlurah/lurah.component';
+import { ListtableComponent } from './modules/lurahmenu/listtable/listtable.component';
+import { ListturnamenComponent } from './modules/panitiamenu/listturnamen/listturnamen.component';
+import { WaitinglistComponent } from './modules/panitiamenu/waitinglist/waitinglist.component';
+import { ListlurahComponent } from './modules/adminmenu/listlurah/listlurah.component';
+import { authIntercept, errorIntercept } from './auth/auth.interceptor';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatInputModule } from '@angular/material/input';
+import { ListtableService } from './modules/lurahmenu/listtable/listtable.service';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { DetailteamComponent } from './modules/panitiamenu/addturnament/detailteam/detailteam.component';
+import { HttpClientModule} from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
   declarations: [
@@ -51,17 +61,16 @@ import { ListlurahComponent } from './modules/listlurah/listlurah.component';
     EditparticipantComponent,
     TablescoreComponent,
     AdminloginComponent,
-    
-    TableturnamenComponent,
     LurahComponent,
-    ListpanitiaComponent,
     ListturnamenComponent,
     WaitinglistComponent,
     ListlurahComponent,
-
+    ListtableComponent,
+    DetailteamComponent,
   ],
   imports: [
     BrowserModule,
+    MatSortModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
@@ -72,9 +81,17 @@ import { ListlurahComponent } from './modules/listlurah/listlurah.component';
     MatToolbarModule,
     MatFormFieldModule,
     MDBBootstrapModule.forRoot(),
-    DefaultModule
+    DefaultModule,
+    MatChipsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatIconModule,
+    MatButtonModule,
+    HttpClientModule, 
+    AngularEditorModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [authIntercept, errorIntercept,ListtableService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
