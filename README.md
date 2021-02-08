@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# adminsidetournament
+Adminside 17 Agustus turnamen website
+>>>>>>> 3d3f4f6032252809396eef0dee4b5f4eb159a634
